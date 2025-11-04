@@ -1,8 +1,10 @@
 {
+  "private": "true",
+  "license": "MIT",
   "scripts": {
     "dev": " concurrently \"npm run snapp\" \"npm run tailwindcss\" \"npm run serve\" ",
     "serve": "npx live-server public",
-    "snapp": "snapp build -s public/views -o public/src -W",
+    "build": "snapp build -s public/views -o public/src",
     "tailwindcss": "npx @tailwindcss/cli -i ./public/style/input.css -o ./public/style/output.css --watch"
   },
   "devDependencies": {
@@ -12,6 +14,7 @@
     "concurrently": "^9.2.1",
     "live-server": "^1.2.2",
     "snapp-icons": "^1.0.1",
+    "snapp-kit": "^2.2.1",
     "tailwindcss": "^4.1.15"
   }
 }
